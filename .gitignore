@@ -1,0 +1,15 @@
+*.pkl
+*.tsv
+*.out
+*.zip
+*.txt
+*.dat
+.ipynb_checkpoints
+*.csv
+.DS_Store
+*.png
+*.scratch
+*.swp
+.my.cnf*
+*.pyc
+*.ipynb_checkpoints

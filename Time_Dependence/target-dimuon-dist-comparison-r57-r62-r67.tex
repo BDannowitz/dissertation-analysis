@@ -1,0 +1,322 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber}
+
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\hypersetup{
+	linkcolor=white,
+	colorlinks=true,       % false: boxed links; true: colored links
+	urlcolor=blue           % color of external links
+}
+
+\title[Distribution Comparisons: R57 v R62 v R67]{Target Dimuon Distribution Comparisons for Roadsets 57, 62, 67}
+\subtitle{}
+
+\author[Bryan Dannowitz]
+{B.~Dannowitz}
+
+\institute{University of Illinois at Urbana-Champaign}
+
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Good spills only (\href{http://seaquest-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=1307}{DocID \#1307})
+		\item Valid dimuons only (\href{http://seaquest-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=1489}{DocID \#1489})
+		\item Target dimuons only (\href{http://seaquest-docdb.fnal.gov:8080/cgi-bin/ShowDocument?docid=1489}{DocID \#1489})
+		\item All distributions (in blue and green) are normalized ($\sum bin\_width \cdot bin\_height = 1$)
+		\item 15 identical bins used for each set of plots
+		\item Residuals (difference of normalized distributions) overlaid in red
+		\item Residuals have the same y-scale, but the y-axis is shifted such that zero (red line) is in the middle of the plot
+		\item $\chi^2/d.o.f.$ calculated with hypothesis that distributions are the same
+		\item No $\chi^2/d.o.f.$ is calculated for G2SEM and liveProton, since there is no reason to expect them to be the same
+	\end{itemize}
+\end{frame}
+
+\section{R57 v R 62}
+
+\begin{frame}{$z_{vertex}$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_dz.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$mass$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_mass.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$x_1$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_xB.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$x_2$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_xT.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_dpz.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z^+$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_pz1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z^-$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_pz2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_dpt.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T^+$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_pt1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T^-$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_pt2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$\cos(\theta)$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_costh.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$\phi$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_phi.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$G2SEM$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_G2SEM.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$liveProton$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R62_compare/R57_R62_compare_liveProton.png}
+	\end{center}
+\end{frame}
+
+\section{R62 v R 67}
+
+\begin{frame}{$z_{vertex}$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_dz.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$mass$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_mass.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$x_1$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_xB.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$x_2$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_xT.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_dpz.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z^+$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_pz1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z^-$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_pz2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_dpt.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T^+$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_pt1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T^-$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_pt2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$\cos(\theta)$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_costh.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$\phi$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_phi.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$G2SEM$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_G2SEM.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$liveProton$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R62_R67_compare/R62_R67_compare_liveProton.png}
+	\end{center}
+\end{frame}
+
+\section{R57 v R 67}
+
+\begin{frame}{$z_{vertex}$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_dz.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$mass$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_mass.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$x_1$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_xB.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$x_2$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_xT.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_dpz.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z^+$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_pz1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_z^-$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_pz2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_dpt.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T^+$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_pt1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$p_T^-$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_pt2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$\cos(\theta)$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_costh.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$\phi$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_phi.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$G2SEM$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_G2SEM.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{$liveProton$}
+	\begin{center}
+		\includegraphics[height=0.85\textheight]{figures/R57_R67_compare/R57_R67_compare_liveProton.png}
+	\end{center}
+\end{frame}
+
+\end{document}
+
+
